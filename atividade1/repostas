@@ -1,0 +1,52 @@
+Aquecimento:
+       1 - basicamente a função dump acessa cada byte da memória separadamente.
+       no caso o i = 10.000, em binário i =     00100111 00010000. como 00010000, o primeiro byte é 16 em decimal,
+       e 00100111 em decimal é 39, então ele imprime 16, 39, 0, 0, já que os últimos 2 bytes são somente 0's.
+
+       a variável c é guardada em somente um byte, i é guardada em 4 bytes diferentes e o vetor v é guardado em 5
+       bytes. Um para cada char.
+
+Representação de Arrays e Structs:
+       1 - o vetor b possui 8 bytes e estão alocados em múltiplos de 4 bytes.
+       o vetor a possui 12 bytes e também está alocado em múltiplos de 4 bytes.
+
+
+       2 - há um buraco entre o parâmetro b e o c porque a memória sempre aloca o tamanho da estrutura de acordo com o
+       tamanho do maior tipo de variável em bytes. como há um int e um short, então será alocado em múltiplos de 4 bytes bytes.
+       como o short somente possui 2 bytes de tamanho, o compilador usa uma técnica chamada
+       padding que preenche os 2 bytes faltantes do short.
+
+       seja cada caractere um byte e cada - um padding.
+       3 - a) tamanho = 12 bytes
+              c1 - - - i i i i c2 - - -
+
+       b)    tamanho = 16 bytes
+              l l l l l l l l c - - - - - - -
+
+       c)   tamanho = 8 bytes
+              i i i i c1 c2 - -
+
+       d)    tamanho = 24 bytes
+              l l l l l l l l c1 - - - - - - - c2 - - - - - - -
+
+       e)    tamanho = 3 bytes
+              c1 c2 c3
+
+       f)    tamanho = 16 bytes
+              s1 s1 - - i i i i c[0] c[1] c[2] - s2 s2 - -
+
+       g)    tamanho = 8 bytes;
+              ou i i i i - - - -
+              ou c[0] c[1] c[2] c[3] c[4] - - -
+
+       h)   tamanho = 6 bytes
+              ou s s - - - -
+              ou c[0] c[1] c[2] c[3] c[4] -
+
+Assembly: Operação Aritméticas e Lógicas:
+
+       Os arquivos no .zip não compilavam no meu computador, por isso não consegui fazer.
+
+Assembly: Tradução de Estruturas de Controle:
+
+       Os arquivos no .zip não compilavam no meu computador, por isso não consegui fazer.

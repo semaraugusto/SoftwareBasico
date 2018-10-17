@@ -1,0 +1,15 @@
+  INP A
+  INP B
+L LAD A
+  SUB B
+  SAD A
+  JGZ L
+  LAD A
+  JZE M
+  ADD B
+  SAD A
+M OUT A
+  HLT
+A DC 0
+B DC 0
+  END
